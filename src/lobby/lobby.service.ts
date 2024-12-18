@@ -5,6 +5,7 @@ import { UpdateLobbyDto } from './dto/update-lobby.dto';
 @Injectable()
 export class LobbyService {
   create(createLobbyDto: CreateLobbyDto) {
+    console.log('createed')
     return 'This action adds a new lobby';
   }
 

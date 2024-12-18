@@ -7,10 +7,12 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { LobbyModule } from './lobby/lobby.module';
 
+const db_url = "mongodb+srv://admin:T4th7nEXSBaqcdZj@MeepleMakerFactory.ktpbt.mongodb.net/?retryWrites=true&w=majority&appName=MeepleMaker";
 
 @Module({
   imports: [
     UserModule,
+    MongooseModule.forRoot(db_url),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'frontend'),
       
